@@ -17,4 +17,3 @@ export class AuthPage extends BasePage {
     this.searchPopupCloseButton = this.page.getByTestId('searchOrder-popup-close-button')
   }
 }
-

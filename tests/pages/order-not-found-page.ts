@@ -13,4 +13,3 @@ export class OrderNotFoundPage extends AuthPage {
     this.notFoundDescription = page.getByText('Check the tracking code')
   }
 }
-

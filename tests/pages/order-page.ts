@@ -21,4 +21,3 @@ export class OrderPage extends AuthPage {
     this.phoneInputError = this.page.getByTestId('phone-input-error')
   }
 }
-
