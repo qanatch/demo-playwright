@@ -44,20 +44,16 @@ test.beforeEach(async ({ page }) => {
 // })
 
 test('logout', async ({ page }) => {
-  const orderCreationPage = await authPage.signIn(USERNAME,PASSWORD)
+  const orderCreationPage = await authPage.signIn(USERNAME, PASSWORD)
   await orderCreationPage.logoutButton.click()
   await expect.soft(authPage.signInButton).toBeVisible()
 })
 
 test('login and create order and show status', async ({}) => {
-  const orderCreationPage = await authPage.signIn(USERNAME,PASSWORD)
+  const orderCreationPage = await authPage.signIn(USERNAME, PASSWORD)
   await orderCreationPage.statusButton.click()
   await orderCreationPage.searchPopUpInputField.fill('1942')
   await orderCreationPage.popUpTrackingButton.click()
   const orderFoundPage = orderCreationPage.orderFoundPage()
   await expect.soft(orderFoundPage)
-
-
 })
-
-

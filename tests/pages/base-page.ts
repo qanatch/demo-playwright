@@ -3,22 +3,21 @@ import { expect, Locator, Page, test } from '@playwright/test'
 export abstract class BasePage {
   readonly page: Page
   readonly languageSwitcher: Locator
-  readonly langEnButton:Locator
-  readonly langRuButton:Locator
+  readonly langEnButton: Locator
+  readonly langRuButton: Locator
   readonly privacyPolicyLink: Locator
-  readonly cookiePoliceLink:Locator
-  readonly termsOfServiceLink:Locator
+  readonly cookiePoliceLink: Locator
+  readonly termsOfServiceLink: Locator
   readonly TIMEOUT_VISIBILITY: number = 5000
 
   protected constructor(page: Page) {
     this.page = page
     this.languageSwitcher = page.locator('div.language')
     this.privacyPolicyLink = page.getByTestId('privacy-policy')
-    this.langEnButton = page.getByRole('button',{name:'EN'})
-    this.langRuButton = page.getByRole('button',{name:'RU'})
+    this.langEnButton = page.getByRole('button', { name: 'EN' })
+    this.langRuButton = page.getByRole('button', { name: 'RU' })
     this.cookiePoliceLink = page.getByTestId('cookie-policy')
     this.termsOfServiceLink = page.getByTestId('terms-of-service')
-
   }
 
   async checkElementVisibility(element: Locator): Promise<void> {

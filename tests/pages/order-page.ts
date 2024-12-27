@@ -1,9 +1,7 @@
 import { Locator, Page } from '@playwright/test'
 import { AuthPage } from './auth-page'
 
-
 export class OrderPage extends AuthPage {
-
   readonly statusButton: Locator
   readonly orderCreatorName: Locator
   readonly orderCreatorPhone: Locator
@@ -24,10 +22,8 @@ export class OrderPage extends AuthPage {
   }
 }
 
-
-
-  // constructor(page: Page, orderPopUpTrackingButton: Locator, formErrorPhone: Locator) {
-  // super(page, orderPopUpTrackingButton)
+// constructor(page: Page, orderPopUpTrackingButton: Locator, formErrorPhone: Locator) {
+// super(page, orderPopUpTrackingButton)
 //     constructor(page: Page) {
 //     super(page)
 //     this.statusButton = page.getByTestId('openStatusPopup-button')

@@ -4,7 +4,6 @@ import { AuthPage } from './auth-page'
 export class OrderFoundPage extends AuthPage {
   readonly uselessField: Locator
 
-
   constructor(page: Page, orderPopUpTrackingButton: Locator) {
     super(page, orderPopUpTrackingButton)
 
