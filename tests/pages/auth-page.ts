@@ -3,17 +3,18 @@ import { Locator, Page } from '@playwright/test'
 
 export class AuthPage extends BasePage {
   readonly logoutButton: Locator
-  readonly searchPopUp: Locator
-  readonly searchPopUpInputField: Locator
-  readonly popUpTrackingButton: Locator
-  readonly popUpCloseButton: Locator
+  readonly createPopupButton: Locator
+  readonly searchPopupInput: Locator
+  readonly searchPopupSubmitButton: Locator
+  readonly searchPopupCloseButton: Locator
 
-  constructor(page: Page, orderPopUpTrackingButton: Locator) {
+  constructor(page: Page) {
     super(page)
     this.logoutButton = this.page.getByTestId('logout-button')
-    this.searchPopUp = this.page.getByTestId('orderSuccessfullyCreated-popup')
-    this.searchPopUpInputField = this.page.getByTestId('searchOrder-input')
-    this.popUpTrackingButton = this.page.getByTestId('searchOrder-submitButton')
-    this.popUpCloseButton = this.page.getByTestId('searchOrder-popup-close-button')
+    this.createPopupButton = this.page.getByTestId('orderSuccessfullyCreated-popup-ok-button')
+    this.searchPopupInput = this.page.getByTestId('searchOrder-input')
+    this.searchPopupSubmitButton = this.page.getByTestId('searchOrder-submitButton')
+    this.searchPopupCloseButton = this.page.getByTestId('searchOrder-popup-close-button')
   }
 }
+
